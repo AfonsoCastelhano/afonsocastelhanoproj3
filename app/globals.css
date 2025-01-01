@@ -4,18 +4,49 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000; /* Cor preta para o texto */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #000000; /* Cor preta também no modo escuro */
   }
 }
 
 body {
-  color: var(--foreground);
+  color: var(--foreground); /* O texto terá sempre a cor definida em --foreground */
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /* Box Model */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* Layout e Posicionamento */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Fundo e Estética */
+  background: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+main {
+  /* Reset e Box Model */
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+
+  /* Fundo */
+  background: whitesmoke;
 }
